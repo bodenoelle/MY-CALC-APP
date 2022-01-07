@@ -6,7 +6,8 @@ function resetAll() {
   }
   
   function deleteDigit() {
-    document.getElementById("result").value = "";
+    let value = document.getElementById("result").value;
+    document.getElementById("result").value = value.substr(0, value.length - 1);
   }
   
   //Function to display values
@@ -16,8 +17,8 @@ function resetAll() {
   
   //Function to evaluate the expression and return result
   function calculate() {
-    let p = document.getElementById("result").value;
-    let q = eval(p);
+    const p = document.getElementById("result").value;
+    const q = eval(p);
     document.getElementById("result").value = q;
   }
   
